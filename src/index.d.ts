@@ -24,6 +24,7 @@ declare namespace printJS {
     onLoadingEnd?: () => void;
     modalMessage?: string;
     frameId?: string;
+    frameRemoveDelay?: number;
     ignoreElements?: string | string[];
     repeatTableHeader?: boolean;
     css?: string | string[];
