@@ -15,7 +15,7 @@ const Browser = {
   isIE: () => {
     return navigator.userAgent.indexOf('MSIE') !== -1 || !!document.documentMode
   },
-  // Edge 20+
+  /// Edge 20+
   isEdge: () => {
     return !Browser.isIE() && !!window.StyleMedia
   },
