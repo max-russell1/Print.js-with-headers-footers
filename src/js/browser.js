@@ -1,4 +1,4 @@
-const Browser = {
+const Browser = { 
   // Firefox 1.0+
   isFirefox: () => {
     return typeof InstallTrigger !== 'undefined'
@@ -23,7 +23,7 @@ const Browser = {
   isChrome: (context = window) => {
     return !!context.chrome
   },
-  // At least Safari 3+: "[object HTMLElementConstructor]"
+  /// At least Safari 3+: "[object HTMLElementConstructor]"
   isSafari: () => {
     return Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0 ||
         navigator.userAgent.toLowerCase().indexOf('safari') !== -1
