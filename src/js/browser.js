@@ -1,7 +1,15 @@
-const Browser = {
+const Browser = { 
   // Firefox 1.0+
   isFirefox: () => {
     return typeof InstallTrigger !== 'undefined'
+  },
+  getFirefoxMajorVersion: (userAgent) => {
+    userAgent = userAgent || navigator.userAgent
+    const firefoxVersionRegex = /firefox\/(\S+)/
+    const match = userAgent.toLowerCase().match(firefoxVersionRegex)
+    if (match) {
+      return match[1].split('.').map(x => parseInt(x))[0]
+    }
   },
   // Internet Explorer 6-11
   isIE: () => {
